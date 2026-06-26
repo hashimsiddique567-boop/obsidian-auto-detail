@@ -1,17 +1,17 @@
 const loader = document.getElementById("loader");
-
-window.addEventListener("load", function () {
-  setTimeout(function () {
-    if (loader) {
-      loader.classList.add("hide");
-    }
-  }, 1200);
-});
 const menuBtn = document.getElementById("menuBtn");
 const nav = document.getElementById("nav");
 const header = document.getElementById("header");
 const scrollProgress = document.getElementById("scrollProgress");
 const cursorGlow = document.getElementById("cursorGlow");
+
+window.addEventListener("load", function () {
+setTimeout(function () {
+if (loader) {
+loader.classList.add("hide");
+}
+}, 1400);
+});
 
 if (menuBtn && nav) {
 menuBtn.addEventListener("click", function () {
@@ -48,6 +48,7 @@ cursorGlow.style.top = event.clientY + "px";
 
 const slides = document.querySelectorAll(".hero-slider .slide");
 const dots = document.querySelectorAll(".slider-dots button");
+
 let currentSlide = 0;
 let slideTimer;
 
