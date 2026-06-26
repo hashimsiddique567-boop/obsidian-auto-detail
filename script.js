@@ -5,14 +5,21 @@ const header = document.getElementById("header");
 const scrollProgress = document.getElementById("scrollProgress");
 const cursorGlow = document.getElementById("cursorGlow");
 
-window.addEventListener("load", function () {
-setTimeout(function () {
-if (loader) {
-loader.classList.add("hide");
+function hideLoader() {
+  if (loader) {
+    loader.classList.add("hide");
+  }
 }
-}, 1400);
+
+document.addEventListener("DOMContentLoaded", function () {
+  setTimeout(hideLoader, 1800);
 });
 
+window.addEventListener("load", function () {
+  setTimeout(hideLoader, 1800);
+});
+
+setTimeout(hideLoader, 3500);
 if (menuBtn && nav) {
 menuBtn.addEventListener("click", function () {
 nav.classList.toggle("active");
